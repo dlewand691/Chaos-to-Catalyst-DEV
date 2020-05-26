@@ -1,0 +1,122 @@
+$grid-margin-gutters: (
+  small : 20px,
+  medium: 40px
+);
+
+@import "scss/cognizant-framework-2020.scss";
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  @include text-crop;
+}
+
+a,
+em,
+i,
+p,
+strong {
+  @include text-crop($line-height: $global-lineheight);
+}
+
+.flex-basis-2col {
+  @include breakpoint(large) {
+    flex-basis: xy-cell-size(1/2) !important;
+  }
+
+  .flex-basis-img {
+    @include breakpoint(small) {
+      min-height: 150px;
+
+      img {
+        object-position: top center;
+      }
+    }
+    @include breakpoint(medium) {
+      min-height: 150px;
+
+      img {
+        object-position: center center;
+      }
+    }
+  }
+}
+
+.flex-basis-3col {
+  @include breakpoint(medium) {
+    flex-basis: xy-cell-size(1/3) !important;
+  }
+
+  .flex-basis-img {
+    @include breakpoint(small) {
+      min-height: 150px;
+
+      img {
+        object-position: top center;
+      }
+    }
+    @include breakpoint(medium) {
+      min-height: 150px;
+
+      img {
+        object-position: center center;
+      }
+    }
+  }
+}
+
+.flex-basis-4col {
+  @include breakpoint(medium) {
+    flex-basis: xy-cell-size(1/4) !important;
+  }
+
+  .flex-basis-img {
+    @include breakpoint(small) {
+      min-height: 150px;
+
+      img {
+        object-position: top center;
+      }
+    }
+    @include breakpoint(medium) {
+      min-height: 150px;
+
+      img {
+        object-position: center center;
+      }
+    }
+  }
+}
+
+.is-active .accordion-title:before {
+  top: calc(50% + 1rem);
+}
+
+.accordion-title:before {
+  font-size: 2rem !important;
+  right    : 3rem !important;
+  z-index  : 1;
+  top      : calc(50% - 1rem);
+}
+
+#scrollUp {
+  padding: 0.25rem 0 0 0.75rem;
+
+  &:before {
+    content: '';
+  }
+
+  &:after {
+    padding: 0.5rem 1.25rem 1.5rem 0.5rem;
+  }
+}
